@@ -1,4 +1,4 @@
-import Expenses from "./components/Expenses";
+import Expenses from "./components/Expenses/Expenses";
 
 function App() {
   const expenses = [
@@ -28,10 +28,11 @@ function App() {
     }
   ];
 
+
   return (
     <div>
       <h1>Udemy React Course</h1>
-      <a href="https://www.https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25595444#overview">Left Off: Lesson 37</a>
+      <a href="https://www.https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25595444#overview">Left Off: Start of Section 4: Lesson 45</a>
       <Expenses items={expenses}/>
     </div>
   );
