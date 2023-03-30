@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 import './ExpenseForm.css';
 
@@ -7,6 +7,7 @@ const ExpenseForm = () => {
     const [enteredTitle, setEnteredTitle] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
+
 
     const titleChangeHandler = (event) => {
         setEnteredTitle(event.target.value);
@@ -17,6 +18,40 @@ const ExpenseForm = () => {
     const dateChangeHandler = (event) => {
         setEnteredDate(event.target.value);
     };
+
+    //to use one state instead of multiple
+    // const [userInput, setUserInput] = useState({
+    //     setEnteredTitle: '',
+    //     setEnteredAmount: '',
+    //     setEnteredDate: ''
+    // });
+
+    // const titleChangeHandler = (event) => {
+    //This way of calling state has a risk of not updating from the correct previous state due to the way React
+    //handles state updating on the back-end.
+    // setUserInput({
+    //     ...userInput,
+    //     enteredTitle: event.target.value,
+    //  })
+    //if your state updated depends on the previous state, use the syntax below
+    //     setUserInput((prevState) => {
+    //         return { ...prevState, enteredTitle: event.target.value };
+    //     });
+    // };
+
+    // const amountChangeHandler = (event) => {
+    //     setUserInput({
+    //         ...userInput,
+    //         enteredAmount: event.target.value,
+    //     })
+    // };
+
+    // const dateChangeHandler = (event) => {
+    //     setUserInput({
+    //         ...userInput,
+    //         enteredDate: event.target.value,
+    //     })
+    // };
 
     return (
         <form>
